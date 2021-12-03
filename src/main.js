@@ -1,4 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import axios from "axios";
 
-createApp(App).mount('#app')
+import myRouter from "./routes.js";
+
+axios.defaults.baseURL =
+  "https://cis410-fa21-montgomery-api.azurewebsites.net/";
+
+const myApp = createApp(App);
+myApp.use(myRouter);
+myApp.mount("#app");
