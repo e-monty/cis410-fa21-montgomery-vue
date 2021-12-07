@@ -1,5 +1,6 @@
 import { createStore } from "vuex";
 import axios from "axios";
+import myRoutes from "./routes.js";
 
 export default createStore({
   state: {
@@ -19,6 +20,11 @@ export default createStore({
     storeArt(state, art) {
       state.art = art;
     },
+
+    clearAuthData(state) {
+      state.token = null;
+      state.user = null;
+    },
   },
   actions: {
     getArt({ commit }) {
@@ -26,6 +32,20 @@ export default createStore({
         console.log("response in /art", aResponse);
         commit("storeArt", aResponse.data);
       });
+    },
+
+    logout({ commit, state }) {
+      axios
+        .post("/contacts/logout", null, {
+          headers: { Authorization: `Bearer ${state.token}` },
+        })
+        .then(() => {
+          commit("clearAuthData");
+          myRoutes.replace("/");
+        })
+        .catch(() => {
+          console.log("error in logging out");
+        });
     },
   },
 });
