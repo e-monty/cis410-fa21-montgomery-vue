@@ -46,7 +46,7 @@ export default {
   },
   created() {
     axios
-      .get("/reviews/me", {
+      .get("/rating/me", {
         headers: {
           Authorization: `Bearer ${this.$store.state.token}`,
         },

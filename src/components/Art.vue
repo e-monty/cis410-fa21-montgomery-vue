@@ -15,7 +15,7 @@
         <tr v-for="anArt in theArt" :key="anArt.ArtPK">
           <th>{{ anArt.Title }}</th>
           <th>{{ anArt.ArtStyle }}</th>
-          <th>{{ anArt.ArtistFK }}</th>
+          <th>{{ anArt.ArtistName }}</th>
           <th>
             <router-link :to="`/art/${anArt.ArtPK}`"
               ><button class="btn btn-primary">Details</button></router-link

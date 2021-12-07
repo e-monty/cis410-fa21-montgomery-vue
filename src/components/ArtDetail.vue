@@ -9,7 +9,7 @@
           Style: <br /><strong>{{ art.ArtStyle }}</strong>
         </p>
         <p>
-          Artist: <br /><strong>{{ art.ArtistFK }}</strong>
+          Artist: <br /><strong>{{ art.ArtistName }}</strong>
         </p>
       </div>
     </div>
