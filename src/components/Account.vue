@@ -17,7 +17,7 @@
         <tr v-for="thisRating in ratingsByUser" :key="thisRating.RatingPK">
           <th>
             <router-link :to="`/art/${thisRating.ArtFK}`">{{
-              thisRating.ArtFK
+              thisRating.Title
             }}</router-link>
           </th>
           <th>{{ thisRating.Review }}</th>

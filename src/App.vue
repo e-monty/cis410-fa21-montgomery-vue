@@ -19,6 +19,7 @@ export default {
   },
   created() {
     this.$store.dispatch("getArt");
+    this.$store.dispatch("tryAutoLogin");
   },
 };
 </script>
