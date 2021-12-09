@@ -10,8 +10,8 @@
     <table v-if="ratingsByUser" class="table">
       <thead>
         <th>Title</th>
-        <th>Summary</th>
-        <th>Rating</th>
+        <th>Review</th>
+        <th>Pass or Fail</th>
       </thead>
       <tbody>
         <tr v-for="thisRating in ratingsByUser" :key="thisRating.RatingPK">
@@ -21,7 +21,9 @@
             }}</router-link>
           </th>
           <th>{{ thisRating.Review }}</th>
-          <th>{{ thisRating.PassFail }}</th>
+          <th>
+            {{ thisRating.PassFail ? "Pass" : "Fail" }}
+          </th>
         </tr>
       </tbody>
     </table>

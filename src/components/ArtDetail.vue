@@ -1,16 +1,29 @@
 <template>
   <div>
     <div class="card">
-      <div class="card-body">
-        <h2 class="text-primary">{{ art.Title }}</h2>
-        <br />
+      <div class="card-header">{{ art.Title }}</div>
+      <br />
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" style="border: none">
+                  Style: <br /><strong>{{ art.ArtStyle }}</strong>
+                </li>
 
-        <p>
-          Style: <br /><strong>{{ art.ArtStyle }}</strong>
-        </p>
-        <p>
-          Artist: <br /><strong>{{ art.ArtistName }}</strong>
-        </p>
+                <li class="list-group-item">
+                  Artist: <br /><strong>{{ art.ArtistName }}</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card-body">
+              <img src="../assets/Beach.jpg" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <br />
@@ -38,6 +51,8 @@ export default {
       let thisArt = allArt.find((anArt) => {
         return anArt.ArtPK == this.$route.params.pk;
       });
+
+      console.log("this art", thisArt);
 
       return thisArt;
     },

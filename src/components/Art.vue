@@ -17,6 +17,12 @@
           <th>{{ anArt.ArtStyle }}</th>
           <th>{{ anArt.ArtistName }}</th>
           <th>
+            <img
+              src="/assets/A Sculpture In the Park.jpg"
+              class="img-thumbnail"
+            />
+          </th>
+          <th>
             <router-link :to="`/art/${anArt.ArtPK}`"
               ><button class="btn btn-primary">Details</button></router-link
             >
