@@ -3,8 +3,11 @@
     <div class="card">
       <div class="card-header">{{ art.Title }}</div>
       <br />
+
+      <!-- CARD CONTAINER -->
       <div class="container">
         <div class="row">
+          <!-- LEFT CARD -->
           <div class="col-sm-6">
             <div class="card-body">
               <ul class="list-group list-group-flush">
@@ -18,9 +21,10 @@
               </ul>
             </div>
           </div>
+          <!-- RIGHT CARD -->
           <div class="col-sm-6">
-            <div class="card-body">
-              <img src="../assets/Beach.jpg" />
+            <div class="card" id="imgStyle">
+              <img src="../assets/1.jpg" id="image" />
             </div>
           </div>
         </div>
@@ -56,12 +60,6 @@ export default {
 
       return thisArt;
     },
-    // formattedBudget(){
-    //   return new Intl.NumberFormat("en-US",{
-    //     style: "currency",
-    //     currency: "USD"
-    //   }).format(this.movie.Budget)
-    // },
     auth() {
       return this.$store.state.token;
     },

@@ -51,7 +51,7 @@ export default createStore({
     },
     tryAutoLogin({ commit }) {
       let token = localStorage.getItem("token");
-      console.log("Here is the token", token);
+      // console.log("Here is the token", token);
       if (!token) {
         return;
       }

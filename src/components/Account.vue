@@ -11,7 +11,7 @@
       <thead>
         <th>Title</th>
         <th>Review</th>
-        <th>Pass or Fail</th>
+        <th>Is it Fridge-worthy?</th>
       </thead>
       <tbody>
         <tr v-for="thisRating in ratingsByUser" :key="thisRating.RatingPK">
@@ -22,7 +22,7 @@
           </th>
           <th>{{ thisRating.Review }}</th>
           <th>
-            {{ thisRating.PassFail ? "Pass" : "Fail" }}
+            {{ thisRating.PassFail ? "Yes" : "No" }}
           </th>
         </tr>
       </tbody>

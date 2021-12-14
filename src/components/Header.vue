@@ -1,7 +1,10 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav
+    class="navbar navbar-expand-lg navbar-light"
+    style="background-color: #e3f2fd"
+  >
     <div class="container-fluid">
-      <router-link class="navbar-brand" to="/">Art Reviews</router-link>
+      <router-link class="navbar-brand" to="/">Refrigerator Art</router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -18,14 +21,6 @@
           <li class="nav-item">
             <router-link class="nav-link active" aria-current="page" to="/art"
               >Art</router-link
-            >
-          </li>
-          <li class="nav-item">
-            <router-link
-              class="nav-link active"
-              aria-current="page"
-              to="/artist"
-              >Artist</router-link
             >
           </li>
           <li v-if="auth" class="nav-item">
