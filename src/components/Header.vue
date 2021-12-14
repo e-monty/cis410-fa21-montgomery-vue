@@ -23,6 +23,14 @@
               >Art</router-link
             >
           </li>
+          <!-- <li class="nav-item">
+            <router-link
+              class="nav-link active"
+              aria-current="page"
+              to="/artist"
+              >Artist</router-link
+            >
+          </li> -->
           <li v-if="auth" class="nav-item">
             <router-link
               class="nav-link active"

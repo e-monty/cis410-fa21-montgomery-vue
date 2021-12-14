@@ -8,7 +8,7 @@ import NotFound from "./components/NotFound.vue";
 import ReviewCreate from "./components/ReviewCreate.vue";
 import Signup from "./components/Signup.vue";
 import Account from "./components/Account.vue";
-import Artist from "./components/Artist.vue";
+// import Artist from "./components/Artist.vue";
 import myStore from "./store.js";
 
 const router = createRouter({
@@ -33,7 +33,7 @@ const router = createRouter({
       component: ArtDetail,
       children: [{ path: "review", component: ReviewCreate }],
     },
-    { path: "/artist", component: Artist },
+    // { path: "/artist", component: Artist },
     { path: "/signup", component: Signup },
     { path: "/:invalidroute(.*)", component: NotFound },
   ],

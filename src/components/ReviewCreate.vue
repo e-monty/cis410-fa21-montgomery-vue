@@ -7,16 +7,14 @@
             <h4>Create a Review</h4>
             <form id="review-form" @submit.prevent="submitReview">
               <div class="mb-3">
-                <label for="rating-input" class="form-label">Rating</label
-                ><input
-                  type="number"
-                  class="form-control"
-                  id="rating-input"
-                  required=""
-                  min="1"
-                  max="10"
-                  v-model="rating"
-                />
+                <label for="rating-input" class="form-label"
+                  >Does it pass the "fridge" test?</label
+                ><br />
+                <select v-model="selected" required>
+                  <option disabled value="">Please select one</option>
+                  <option value="True">Yes!</option>
+                  <option value="False">No...</option>
+                </select>
               </div>
               <div class="mb-3">
                 <label for="summary-input" class="form-label">Review</label
@@ -70,15 +68,17 @@ export default {
       };
 
       axios
-        .post("/reviews", myReview, {
+        .post("/rating", myReview, {
           headers: { Authorization: `Bearer ${this.$store.state.token}` },
         })
         .then(() => {
           this.$router.replace("/account");
+          console.log("the review", myReview);
         })
         .catch(() => {
           this.errorMessage =
             "Unable to create a review, please try again later";
+          console.log("the review", myReview);
         });
     },
     cancelReview() {

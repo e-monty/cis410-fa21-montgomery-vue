@@ -15,16 +15,19 @@
                   Style: <br /><strong>{{ art.ArtStyle }}</strong>
                 </li>
 
-                <li class="list-group-item">
+                <li class="list-group-item" style="border: none">
                   Artist: <br /><strong>{{ art.ArtistName }}</strong>
                 </li>
+                <div class="card border-0">
+                  <img src="../assets/Emma.jpg" style="width: 10rem" />
+                </div>
               </ul>
             </div>
           </div>
           <!-- RIGHT CARD -->
           <div class="col-sm-6">
-            <div class="card" id="imgStyle">
-              <img src="../assets/1.jpg" id="image" />
+            <div class="card">
+              <img src="../assets/34.jpg" />
             </div>
           </div>
         </div>
