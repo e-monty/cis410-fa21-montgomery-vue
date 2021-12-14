@@ -1,12 +1,12 @@
 <template>
   <nav
     class="navbar navbar-expand-lg navbar-light"
-    style="background-color: #e3f2fd"
+    style="background-color: linear-gradient(to bottom right, lightblue, blue)"
   >
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/">Refrigerator Art</router-link>
       <button
-        class="navbar-toggler"
+        class="navbar-toggler navbar-light bg-light"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
@@ -49,9 +49,7 @@
               class="nav-link active"
               aria-current="page"
               to="/signup"
-              ><button class="btn btn-outline-warning text-dark">
-                Signup
-              </button></router-link
+              ><button class="btn btn-success">Signup</button></router-link
             >
           </li>
           <li v-if="auth" class="nav-item">

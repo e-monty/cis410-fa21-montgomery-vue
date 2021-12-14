@@ -21,7 +21,7 @@
           </th>
           <th>
             <router-link :to="`/art/${anArt.ArtPK}`"
-              ><button class="btn btn-primary">Details</button></router-link
+              ><button class="btn btn-success">Details</button></router-link
             >
           </th>
         </tr>

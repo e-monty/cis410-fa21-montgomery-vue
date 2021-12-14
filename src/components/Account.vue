@@ -16,7 +16,7 @@
       <tbody>
         <tr v-for="thisRating in ratingsByUser" :key="thisRating.RatingPK">
           <th>
-            <router-link :to="`/art/${thisRating.ArtFK}`">{{
+            <router-link class="link" :to="`/art/${thisRating.ArtFK}`">{{
               thisRating.Title
             }}</router-link>
           </th>
@@ -64,4 +64,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.link {
+  color: black;
+}
+th {
+  border: none;
+}
+</style>

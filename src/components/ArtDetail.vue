@@ -40,7 +40,7 @@
     >
 
     <router-link v-else :to="`/login`"
-      ><button class="btn btn-outline-success">
+      ><button class="btn btn-success">
         Sign In to Add a Review
       </button></router-link
     >

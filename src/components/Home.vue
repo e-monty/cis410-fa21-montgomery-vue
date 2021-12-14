@@ -286,4 +286,12 @@ export default {};
 .card {
   margin: 5px;
 }
+html {
+  height: 100%;
+}
+body {
+  background-image: linear-gradient(to bottom right, lightblue, blue);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 </style>

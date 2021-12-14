@@ -12,8 +12,8 @@
                 ><br />
                 <select v-model="selected" required>
                   <option disabled value="">Please select one</option>
-                  <option value="True">Yes!</option>
-                  <option value="False">No...</option>
+                  <option value="Pass">Yes!</option>
+                  <option value="Fail">No...</option>
                 </select>
               </div>
               <div class="mb-3">
@@ -78,7 +78,7 @@ export default {
         .catch(() => {
           this.errorMessage =
             "Unable to create a review, please try again later";
-          console.log("the review", myReview);
+          console.log("error review", myReview);
         });
     },
     cancelReview() {
