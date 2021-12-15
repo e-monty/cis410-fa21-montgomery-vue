@@ -27,7 +27,7 @@
           <!-- RIGHT CARD -->
           <div class="col-sm-6">
             <div class="card">
-              <img src="../assets/34.jpg" />
+              <img src="../assets/13.jpg" />
             </div>
           </div>
         </div>

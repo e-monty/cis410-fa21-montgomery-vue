@@ -10,7 +10,7 @@
                 <label for="rating-input" class="form-label"
                   >Does it pass the "fridge" test?</label
                 ><br />
-                <select v-model="selected" required>
+                <select v-model="passFail" required>
                   <option disabled value="">Please select one</option>
                   <option value="Pass">Yes!</option>
                   <option value="Fail">No...</option>
@@ -24,7 +24,7 @@
                   class="form-control"
                   id="summary-input"
                   required=""
-                  v-model="summary"
+                  v-model="review"
                 />
               </div>
               <button type="submit" class="btn btn-primary">
