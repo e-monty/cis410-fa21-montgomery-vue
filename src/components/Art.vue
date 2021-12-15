@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Art</h1>
+    <h1>Works of Art</h1>
     <hr />
     <table class="table">
       <thead>
